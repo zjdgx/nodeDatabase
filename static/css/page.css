@@ -16,6 +16,9 @@ html, body, ul, li, p, h1, h2, h3, h4 {
 }
 
 .header a.logo {
+	color: #fff;
 	display: block;
-	text-decuration: none;
+	padding: 20px 0;
+	font-size: 40px;
+	text-decoration: none;
 }

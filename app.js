@@ -7,7 +7,7 @@ var express = require('express'),
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 console.log('dirName: ' + __dirname);
-express.static(path.join(__dirname, '/static'));
+app.use(express.static(path.join(__dirname, '/static')));
 
 app.get('/', function(req, res) {
 	res.render('login', {
