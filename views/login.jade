@@ -4,4 +4,10 @@ html
 		include common/style.jade
 	body
 		include common/header
-		p fdsagffhdhsdsgdsgdsagsag
+		form(action='/register',method='post').addUser
+			input(type='text',placeholder='Email or telephone',name='name')
+			input(type='password',placeholder='Password',name='password')
+			input(type='password',placeholder='confirm password')
+			button(type='submit').submitUser 注册
+		script(src='../js/login.js')
+			

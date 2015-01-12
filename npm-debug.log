@@ -1,0 +1,103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'd:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'd:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 warn package.json nodeDatabase@1.0.0 No repository field.
+5 warn package.json nodeDatabase@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ 'e:\\web\\zjdgx\\nodeDatabase',
+7 verbose install   [ 'jQuery',
+7 verbose install     'bootstrap',
+7 verbose install     'color',
+7 verbose install     'express',
+7 verbose install     'express-session',
+7 verbose install     'formidable',
+7 verbose install     'jade' ] ]
+8 info preinstall nodeDatabase@1.0.0
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'jQuery@^1.8.1', null ]
+11 verbose cache add name=undefined spec="jQuery@^1.8.1" args=["jQuery@^1.8.1",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'jQuery@^1.8.1',
+12 verbose parsed url   path: 'jQuery@^1.8.1',
+12 verbose parsed url   href: 'jQuery@^1.8.1' }
+13 verbose already installed skipping bootstrap@^3.3.1 e:\web\zjdgx\nodeDatabase
+14 verbose already installed skipping color@^0.7.3 e:\web\zjdgx\nodeDatabase
+15 verbose already installed skipping express@^4.10.7 e:\web\zjdgx\nodeDatabase
+16 verbose already installed skipping express-session@^1.10.1 e:\web\zjdgx\nodeDatabase
+17 verbose already installed skipping formidable@^1.0.16 e:\web\zjdgx\nodeDatabase
+18 verbose already installed skipping jade@^1.8.2 e:\web\zjdgx\nodeDatabase
+19 verbose cache add name="jQuery" spec="^1.8.1" args=["jQuery","^1.8.1"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '^1.8.1',
+20 verbose parsed url   path: '^1.8.1',
+20 verbose parsed url   href: '^1.8.1' }
+21 verbose addNamed [ 'jQuery', '^1.8.1' ]
+22 verbose addNamed [ null, '>=1.8.1-0 <2.0.0-0' ]
+23 silly lockFile 7b2b9052-jQuery-1-8-1 jQuery@^1.8.1
+24 verbose lock jQuery@^1.8.1 C:\Users\Administrator\AppData\Roaming\npm-cache\7b2b9052-jQuery-1-8-1.lock
+25 silly addNameRange { name: 'jQuery', range: '>=1.8.1-0 <2.0.0-0', hasData: false }
+26 verbose request where is /jQuery
+27 verbose request registry https://registry.npmjs.org/
+28 verbose request id f1484128bb4b1045
+29 verbose url raw /jQuery
+30 verbose url resolving [ 'https://registry.npmjs.org/', './jQuery' ]
+31 verbose url resolved https://registry.npmjs.org/jQuery
+32 verbose request where is https://registry.npmjs.org/jQuery
+33 info trying registry request attempt 1 at 23:05:33
+34 verbose etag "CFNA0Q43FQEDT88DBAO6F48HC"
+35 http GET https://registry.npmjs.org/jQuery
+36 http 304 https://registry.npmjs.org/jQuery
+37 silly registry.get cb [ 304,
+37 silly registry.get   { date: 'Mon, 12 Jan 2015 15:05:32 GMT',
+37 silly registry.get     server: 'Apache',
+37 silly registry.get     via: '1.1 varnish',
+37 silly registry.get     'last-modified': 'Mon, 12 Jan 2015 15:04:56 GMT',
+37 silly registry.get     'cache-control': 'max-age=60',
+37 silly registry.get     etag: '"CFNA0Q43FQEDT88DBAO6F48HC"',
+37 silly registry.get     age: '37',
+37 silly registry.get     'x-served-by': 'cache-ty66-TYO',
+37 silly registry.get     'x-cache': 'HIT',
+37 silly registry.get     'x-cache-hits': '1',
+37 silly registry.get     'x-timer': 'S1421075132.994146,VS0,VE0',
+37 silly registry.get     vary: 'Accept',
+37 silly registry.get     'content-length': '0',
+37 silly registry.get     'keep-alive': 'timeout=10, max=50',
+37 silly registry.get     connection: 'Keep-Alive' } ]
+38 verbose etag https://registry.npmjs.org/jQuery from cache
+39 silly addNameRange number 2 { name: 'jQuery', range: '>=1.8.1-0 <2.0.0-0', hasData: true }
+40 silly addNameRange versions [ 'jQuery', [ '1.6.2', '1.6.3', '1.7.2', '1.7.3', '1.7.4' ] ]
+41 silly lockFile 7b2b9052-jQuery-1-8-1 jQuery@^1.8.1
+42 silly lockFile 7b2b9052-jQuery-1-8-1 jQuery@^1.8.1
+43 error notarget No compatible version found: jQuery@'>=1.8.1-0 <2.0.0-0'
+43 error notarget Valid install targets:
+43 error notarget ["1.6.2","1.6.3","1.7.2","1.7.3","1.7.4"]
+43 error notarget
+43 error notarget This is most likely not a problem with npm itself.
+43 error notarget In most cases you or one of your dependencies are requesting
+43 error notarget a package version that doesn't exist.
+44 error System Windows_NT 6.1.7601
+45 error command "d:\\Program Files\\nodejs\\node.exe" "d:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+46 error cwd e:\web\zjdgx\nodeDatabase
+47 error node -v v0.10.32
+48 error npm -v 1.4.28
+49 error code ETARGET
+50 verbose exit [ 1, true ]
