@@ -8,12 +8,15 @@
   },
   "author": "zjdgx",
   "dependencies": {
-    "jQuery": "^1.7.4",
+    "async": "^0.9.0",
+    "body-parser": "^1.10.1",
     "bootstrap": "^3.3.1",
     "color": "^0.7.3",
     "express": "^4.10.7",
     "express-session": "^1.10.1",
     "formidable": "^1.0.16",
-    "jade": "^1.8.2"
+    "jQuery": "^1.7.4",
+    "jade": "^1.8.2",
+    "mongodb": "^1.4.28"
   }
 }

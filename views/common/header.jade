@@ -10,5 +10,9 @@ div.header
 		li
 			a(href='#') Link4
 	div.user_info
-		a(href='/login.html') 登陆
-		a(href='/register.html') 注册
+		- if (user)
+			a(href='#') #{user.name}&nbsp;|&nbsp;
+			a(href='#') 退出
+		- else
+			a(href='/login') 登录&nbsp;|&nbsp;
+			a(href='/register') 注册

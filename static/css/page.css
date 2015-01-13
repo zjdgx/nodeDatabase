@@ -6,8 +6,11 @@ html, body, ul, li, p, h1, h2, h3, h4 {
 /* header样式
 ---------------------------------*/
 .header {
+	height: 80px;
 	padding: 0 40px;
 	overflow: hidden;
+	line-height: 80px;
+	margin-bottom: 10px;
 	background-color: #123;
 }
 
@@ -18,17 +21,40 @@ html, body, ul, li, p, h1, h2, h3, h4 {
 .header a.logo {
 	color: #fff;
 	display: block;
-	padding: 20px 0;
 	font-size: 40px;
 	text-decoration: none;
 }
 
+.header .nav li {
+	padding: 0 20px;
+}
+
+.header .nav li a,
+.header .user_info a {
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.header .user_info {
+	float: right;
+}
+
+/* main content style
+--------------------------------------*/
+.main {
+	width: 960px;
+	margin: 0 auto;
+	padding: 10px 20px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+/* login style
+--------------------------------------*/
 .addUser {
 	width: 300px;
-	padding: 10px 20px;
-	border-radius: 6px;
-	margin: 40px auto 0;
-	border: 1px solid #ccc;
+	margin: 20px 0 0 0;
 }
 
 .addUser input {
@@ -52,4 +78,19 @@ html, body, ul, li, p, h1, h2, h3, h4 {
 	padding: 4px 12px;
 	border-radius: 3px;
 	background-color: #3f89ec;
+}
+
+#register p {
+	width: 960px;
+	height: 400px;
+	font-size: 20px;
+	margin: 20px auto;
+	font-weight: bold;
+	padding: 20px 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+.failure {
+	color: #f00;
 }
