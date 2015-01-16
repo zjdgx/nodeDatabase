@@ -7,8 +7,10 @@ div.header
 			a(href='#') Link2
 		li
 			a(href='#') Link3
-		li
-			a(href='#') Link4
+		- if (isLogin)
+			li
+				a(href='#') Link4
+
 	div.user_info
 		- if (user)
 			a(href='#') #{user.name}&nbsp;|&nbsp;

@@ -1,11 +1,12 @@
 var express = require('express'),
-	session = require('express-session'),
 	app = express(),
 	sys = require('sys'),
 	path = require('path'),
+	formidable = require("formidable"),
 	bodyParser = require('body-parser'),
+	session = require('express-session'),
+	cookieParser = require('cookie-parser'),
 	userService = require('./private/service/UserService');
-	formidable = require("formidable");
 	
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -13,20 +14,24 @@ console.log('dirName: ' + __dirname);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, '/static')));
-app.use(express.cookieParser('likeshan')); 
-app.use(express.session({ secret: "andylau" }));
+app.use(cookieParser()); 
+app.use(session({
+	secret: "andylau",
+	cookie: {maxAge: 2 * 60000}//两分钟后session失效
+}));
 
 app.get('/', function(req, res) {
-	console.log(req.session.user)
+	console.log('get("/") user: '+req.session.user);
 	userService.checkLogin(req, res, function(err, user) {
-		if (err) {
-			res.redirect('/login');
-		} else {
-			res.render('index', {
-				title: 'zjdgx',
-				user: {name: user}
-			});
+		if (user) {
+			user.name = req.name;
 		}
+
+		res.render('index', {
+			title: 'zjdgx',
+			isLogin: !err,
+			user: user
+		});
 	})
 });
 
@@ -45,15 +50,11 @@ app.post('/register', function(req, res) {
 				content: '注册失败, 请重试. 错误信息: ' + result.msg
 			});
 		} else {
-			res.redirect('index')
-			
-			res.render('index',{
-				title: '欢迎' + req.body.name
-			});
+			res.redirect('/');
 		}
 	});
 });
 
-app.listen(8000, function() {
-	console.log('nodeDatabase started on port 8000...');
+app.listen(8001, function() {
+	console.log('nodeDatabase started on port 8001...');
 });
